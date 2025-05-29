@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isac.dev - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+      overflow: auto;
+      transition: 0.5s ease-in-out;
+    }
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    } 
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #1e1e1e;
+      position: fixed;
+      top: 0;
+      bottom: 85;
+      width: 100%;
+      z-index: 1000;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    nav a {
+      padding: 8px 16px;
+      margin: 0 15px;
+      color: #f5f5f5;
+      text-decoration: none;
+      font-weight: 300;
+    }
+    .hero img {
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 2;
+      border: 5px solid #00b894;
+    }
+    .hire {
+      background-color: #00b894;
+      padding: 8px 16px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .header_choices {
+        display: flex;
+        padding-right: 50px;
+    }
+    .cv-btn,.github-btn, .linkedin-btn, .insta-btn  {
+      transition: 0.5s;
+      background-color: #00b894;
+      padding: 8px 16px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      padding-top: 120px;
+      text-align: center;
+    }
+    .hero h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #cccccc;
+    }
+    .hero .buttons {
+      margin-top: 30px;
+    }
+    .hero .buttons a {
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .active {
+      color: #00b894;
+      font-weight: bolder;
+      border-bottom: #00b894 2px solid;
+      padding-bottom: 4px;
+    }
+    .cv-btn, .github-btn, .linkedin-btn, .insta-btn {
+      border-radius: 30px;
+      border: #00b894 1px solid;
+      background:  #1e1e1e;
+    }
+    .cv-btn:hover, .github-btn:hover, .linkedin-btn:hover, .insta-btn:hover {
+      margin: 0 30px;
+      padding: 15px 30px;
+      color: #1e1e1e;
+      background-color: #00b894;
+      border: white 1px solid;
+      transition: 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Isac.dev</div>
+    <nav class="header_choices">
+      <a href="index.html" class="active">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="project.html">Projects</a>
+      <a class="hire" href="mailto:isaclim0412@gmail.com">Contact me</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <img src="image/z001.png" alt="Isac Profile">
+    <h1>Hi, I'm Isac 👋</h1>
+    <p>A Passionate Fresh Web Developer & ICT Student 
+      <br> currently studying Diploma in 
+      <br> ICT at Asia Pacific University (APU), Malaysia.</p>
+    <div class="buttons">
+      <a class="cv-btn" href="image/Isac_CV.pdf">Download CV ⬇️</a>
+      <a class="github-btn" href="https://github.com/Jellyfish0412">GitHub</a>
+      <a class="linkedin-btn" href="www.linkedin.com/in/isac-lim-9050b6341">LinkedIn</a>
+      <a class="insta-btn" href="https://www.instagram.com/fisssh_0412/">Instagram</a>
+    </div>
+  </section>
+
+  <style>
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(30, 30, 30, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: row;
+    }
+
+    .dot {
+      width: 20px;
+      height: 20px;
+      margin: 3rem 0.2rem;
+      background: #00b894;
+      border-radius: 50%;
+      animation: dotbounce 0.6s infinite alternate;
+    }
+
+    .spinner:nth-child(1) { animation-delay: 0.1s; }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    .dot:nth-child(4) { animation-delay: 0.6s; }
+    .dot:nth-child(5) { animation-delay: 0.8s; }
+
+    @keyframes dotbounce {
+      from { transform: translateY(0); opacity: 1; }
+      to   { transform: translateY(-20px); opacity: 0.3; }
+    }
+  </style>
+  <div class="loader">
+    <div class="spinner"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelector('.loader').style.display = 'none';
+    });
+
+    document.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        const href = link.getAttribute('href');
+        if (
+          href &&
+          !href.startsWith('#') &&
+          !href.startsWith('javascript:') &&
+          !href.startsWith('mailto:')
+        ) {
+          e.preventDefault();
+          document.querySelector('.loader').style.display = 'flex'; // 显示 loader
+
+          setTimeout(function () {
+            window.location.href = href;
+          }, 1000);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isac.dev - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+            overflow: auto;
+            transition: 0.5s ease-in-out;
+        }
+        body.fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        } 
+        header {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #1e1e1e;
+            position: fixed;
+            top: 0;
+            bottom: 85;
+            width: 100%;
+            z-index: 1000;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        nav a {
+        padding: 8px 16px;
+        margin: 0 15px;
+        color: #f5f5f5;
+        text-decoration: none;
+        font-weight: 300;
+        }
+        .hire {
+        background-color: #00b894;
+        padding: 8px 16px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        }
+        .header_choices {
+            display: flex;
+            padding-right: 50px;
+        }
+        .project, .project2 {
+            padding: 0px 20px;
+            display: flex;
+        }
+        .project-item-1, .project-item-2, .project-item-3, .project-item-4 {
+            width: 600px;
+            height: 400px;
+            margin-top: 50px;
+            margin-left: 50px;
+            align-items: center;
+            justify-content: center;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-bottom: #f5f5f5 1px solid;
+        }
+        .project-num {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .view-code {
+            width: 80px;
+            height: 20px;
+            margin-top: 20px;
+            background-color: #1e1e1e;
+            padding: 8px 16px;
+            border-radius: 15px;
+            color: #00b894;
+            text-decoration: none;
+            border: 1px solid #00b894;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .view-code:hover {
+            background-color: #00b894;
+            color: white;
+            padding-left: 10px;
+            padding-right: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        .view-code:active {
+            background-color: #1e1e1e;
+            color: white;
+            transform: 0.1s;
+        }
+        .project-num h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #00b894;
+        }
+        .DoneZone h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .DoneZone p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #f5f5f5;
+        }
+        .a{
+            margin-bottom: 5px;
+        }
+        .hero {
+            padding-top: 100px;
+            margin-left: 40px;
+            padding-left: 40px;
+            margin-bottom: 10px;
+        }
+        #view-project {
+            text-align: center;
+            width: 100px;
+        }
+        .active {
+            color: #00b894;
+            font-weight: bolder;
+            border-bottom: #00b894 2px solid;
+            padding-bottom: 4px;
+        }
+        .hero {
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <div class="logo">Isac.dev</div>
+    <nav class="header_choices">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="project.html" class="active">Projects</a>
+      <a class="hire" href="mailto:isaclim0412@gmail.com">Contact me</a>
+    </nav>
+  </header>
+  
+  <div class="hero">
+    <h1>My Projects</h1>
+  </div>
+
+  <div class="project">
+    <div class="project-item-1">
+        <div class="project-num">
+            <h1>01</h1>
+            <a class="view-code" href="https://github.com/Jellyfish0412/Donezone">View Code</a>
+        </div>
+        <div class="DoneZone">
+            <h1>DoneZone – Productivity Web Tool</h1>
+            <h3>Tech Stack: HTML, CSS, JavaScript (PHP & database planned)</h3>
+            <p class="a">Overview: </p>
+            <p>A web-based productivity tool inspired by Notion, featuring a calendar view, 
+                note creation, modal animations, and responsive layout. Designed for organizing tasks and personal notes.
+            </p>
+        </div>
+    </div>
+
+    <div class="project-item-2">
+        <div class="project-num">
+            <h1>02</h1>
+            <a class="view-code" href="https://github.com/Jellyfish0412/python_Bakery_Management_System">View Code</a>
+        </div>
+        <div class="DoneZone">
+            <h1>Python Bakery Management System</h1>
+            <h3>Tech Stack: Python (CLI, file handling, modular programming)</h3>
+            <p class="a">Overview: </p>
+            <p>
+                A command-line bakery system allowing customer registration, product browsing, cart management, order tracking, 
+                and feedback. All operations use local .txt files for persistence.
+            </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="project2">
+    <div class="project-item-3">
+        <div class="project-num">
+            <h1>03</h1>
+            <a class="view-code" href="#">View Code</a>
+        </div>
+        <div class="DoneZone">
+            <h1>PPE Inventory System (Java GUI)</h1>
+            <h3>Tech Stack: Java, Swing, File I/O</h3>
+            <p class="a">Overview: </p>
+            <p>A desktop GUI system for managing PPE inventory within healthcare operations. Supports role-based access (admin/staff), 
+                supplier management, stock updates, and transaction logging.
+            </p>
+        </div>
+    </div>
+    <div class="project-item-4">
+        <div class="project-num">
+            <h1>04</h1>
+            <a class="view-code" id="view-project" href="https://www.figma.com/design/5p79qltNcwmqdaY9efC4OA/Voyago?node-id=0-1&t=xK9eyQ78kwkNhs4D-0">View Design</a>
+        </div>
+        <div class="DoneZone">
+            <h1>Voyago - Flight Booking App Concept</h1>
+            <h3>Tech Stack: Conceptual (UI/UX, AR planned)</h3>
+            <p class="a">Overview: </p>
+            <p>A conceptual mobile app aimed at improving flight booking experiences through enhanced UI/UX.
+                Focuses on user-friendly design and innovative booking processes.
+            </p>
+        </div>
+  </div>
+
+    <style>
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(30, 30, 30, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      flex-direction: row;
+    }
+
+    .dot {
+      width: 20px;
+      height: 20px;
+      margin: 3rem 0.2rem;
+      background: #00b894;
+      border-radius: 50%;
+      animation: dotbounce 0.6s infinite alternate;
+    }
+
+    .spinner:nth-child(1) { animation-delay: 0.1s; }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+    .dot:nth-child(4) { animation-delay: 0.6s; }
+    .dot:nth-child(5) { animation-delay: 0.8s; }
+
+    @keyframes dotbounce {
+      from { transform: translateY(0); opacity: 1; }
+      to   { transform: translateY(-20px); opacity: 0.3; }
+    }
+  </style>
+  <div class="loader">
+    <div class="spinner"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelector('.loader').style.display = 'none';
+    });
+
+    document.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        const href = link.getAttribute('href');
+        if (
+          href &&
+          !href.startsWith('#') &&
+          !href.startsWith('javascript:') &&
+          !href.startsWith('mailto:')
+        ) {
+          e.preventDefault();
+          document.querySelector('.loader').style.display = 'flex'; // 显示 loader
+
+          setTimeout(function () {
+            window.location.href = href;
+          }, 1000);
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>
