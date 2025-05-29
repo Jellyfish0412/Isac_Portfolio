@@ -322,26 +322,22 @@
   </div>
 
   <script>
-    window.addEventListener('load', function () {
-      document.querySelector('.loader').style.display = 'none';
-    });
-
     document.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function (e) {
         const href = link.getAttribute('href');
-        if (
-          href &&
-          !href.startsWith('#') &&
-          !href.startsWith('javascript:') &&
-          !href.startsWith('mailto:')
-        ) {
-          e.preventDefault();
-          document.querySelector('.loader').style.display = 'flex'; // 显示 loader
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
 
-          setTimeout(function () {
-            window.location.href = href;
-          }, 1000);
-        }
+        e.preventDefault(); 
+
+        const loader = document.querySelector('.loader');
+        loader.style.display = 'flex';
+        loader.style.opacity = 0;
+        loader.style.transition = 'opacity 0.3s ease-in-out';
+        setTimeout(() => loader.style.opacity = 1, 10);
+
+        setTimeout(function () {
+          window.location.href = href;
+        }, 1000);
       });
     });
   </script>
